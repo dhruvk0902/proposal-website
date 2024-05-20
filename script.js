@@ -1,30 +1,15 @@
-let currentMessage = 0;
-const messages = document.querySelectorAll('.message');
-
-function showNextMessage() {
-    if (currentMessage < messages.length) {
-        messages[currentMessage].style.display = 'block';
-        currentMessage++;
-        if (currentMessage < messages.length) {
-            setTimeout(showNextMessage, 4000); // Adjust the delay as needed
-        }
-    }
+function nextPopup(currentId, nextId) {
+    document.getElementById(currentId).classList.add('hidden');
+    document.getElementById(nextId).classList.remove('hidden');
 }
 
-document.getElementById('noButton').addEventListener('mouseover', function() {
-    this.style.position = 'absolute';
-    this.style.top = Math.random() * (window.innerHeight - this.offsetHeight) + 'px';
-    this.style.left = Math.random() * (window.innerWidth - this.offsetWidth) + 'px';
-});
-
 document.getElementById('yesButton').addEventListener('click', function() {
-    document.body.innerHTML = '<h1>Yay! Let\'s get to know each other better!</h1>';
-    const container = document.createElement('div');
-    container.className = 'fireworks';
-    document.body.appendChild(container);
-    const fireworks = new Fireworks(container, { /* options */ });
-    fireworks.start();
+    alert("Thank you for saying Yes! Let's plan our date.");
 });
 
-// Start displaying messages
-showNextMessage();
+document.getElementById('noButton').addEventListener('mouseover', function() {
+    var noButton = document.getElementById('noButton');
+    noButton.style.position = 'absolute';
+    noButton.style.top = Math.random() * (window.innerHeight - noButton.clientHeight) + 'px';
+    noButton.style.left = Math.random() * (window.innerWidth - noButton.clientWidth) + 'px';
+});
