@@ -3,73 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Marry Me?</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Proposal Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Our Journey Together</h1>
-        <p>From the moment we met, I knew you were special...</p>
-        <img src="your-photo.jpg" alt="A beautiful memory" class="photo">
-        <h2>What is Love?</h2>
-        <p>I've been asked this question many times,<br>
-        What is love? Let's see if I can describe;<br>
-        Love is respect, love is loyalty,<br>
-        Love is madness that goes beyond reality;<br>
-        Love is worship, love is care,<br>
-        Love is the hand caressing your hair;<br>
-        Love is peace but love is chaos too,<br>
-        Love is totally a dream come true;<br>
-        Love is hope, love is faith,<br>
-        Love is sometimes a little hate;<br>
-        Love is friendship but love also betrays,<br>
-        Love is finding your person in a room filled with snakes;<br>
-        Love is truth but love also lies,<br>
-        Love is a heartbreak in disguise;<br>
-        Love is pure, love is divine,<br>
-        Love is spending some quality time;<br>
-        Love is hello, love is goodbye,<br>
-        Love is what makes you want to cry;<br>
-        Love is selfless but love is selfish too,<br>
-        Love is not always black and white sometimes it's blue;<br>
-        Love is comfort, love is support,<br>
-        Love is what hurts the most;<br>
-        Love is all the cute little stuff,<br>
-        Love is also what makes you tough;<br>
-        Love is you and love is me,<br>
-        Love is holding on, love is letting go,<br>
-        Love is what we all are living for;<br>
-        There is no proper definition of it that's completely true,<br>
-        At last love is love,<br>
-        Love is everything that makes you, you;<br>
-        </p>
-        <p>You make my world brighter every day. Will you marry me?</p>
-        <h2>Pick the Venue</h2>
-        <div class="venue-options">
-            <button id="tennisDate">Tennis Date</button>
-            <button id="movieDate">Movie Date</button>
-            <button id="momosDate">Momos Date</button>
+        <div class="message" id="message1">
+            <p>Hey!!!<br>
+            I don't know whether it's lame or not, but this is how I know stuff thodasa.<br>
+            I am very Old School and You are super Crazyyy<br>
+            But you remember I met you on the very first day of college...</p>
+            <!-- Add graphics here -->
         </div>
-        <p id="thankYouMessage" class="hidden">Thank you for choosing a date! Looking forward to it!</p>
+        <div class="message" id="message2">
+            <p>I had a little crush on you since then. Like your facial expressions, your hair, your childlike innocence...</p>
+        </div>
+        <div class="message" id="message3">
+            <p>We had no contact for some time... I wanted to ask you out on prom but I couldn't...</p>
+        </div>
+        <div class="message" id="message4">
+            <p>And dude, SINDHI NAHI HU MEI, BUT BANIYA HU, AND BUSSINESS FAMILY S ATA HU</p>
+        </div>
+        <div class="message" id="message5">
+            <p>I'll be honest with you... I am very toxic for my work...</p>
+        </div>
+        <div class="message" id="message6">
+            <p>Samya!! I am a person who doesn't want to be with lots of people in his life...</p>
+        </div>
+        <div class="message" id="message7">
+            <p>Tu Dream Vali Hai<br>
+            Me Khwab Wala Hun<br>
+            Tu Screen Vali Hai<br>
+            Me Kitaab Wala Hun</p>
+        </div>
+        <div class="message" id="message8">
+            <p>Can I have a chance to know you more, a bit better?</p>
+            <p>She craves to be loved like a poem...</p>
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
     </div>
-    <script>
-        document.getElementById('tennisDate').addEventListener('click', function() {
-            showThankYouMessage('Tennis Date');
-        });
-
-        document.getElementById('movieDate').addEventListener('click', function() {
-            showThankYouMessage('Movie Date');
-        });
-
-        document.getElementById('momosDate').addEventListener('click', function() {
-            showThankYouMessage('Momos Date');
-        });
-
-        function showThankYouMessage(dateType) {
-            var message = document.getElementById('thankYouMessage');
-            message.textContent = 'Thank you for choosing a ' + dateType + '! Looking forward to it!';
-            message.classList.remove('hidden');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
