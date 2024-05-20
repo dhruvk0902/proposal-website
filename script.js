@@ -5,6 +5,7 @@ document.getElementById('noButton').addEventListener('mouseover', function() {
 });
 
 document.getElementById('yesButton').addEventListener('click', function() {
-    alert('Yay! Let\'s get to know each other better!');
+    document.body.innerHTML = '<h1>Yay! Let\'s get to know each other better!</h1>';
+    document.body.innerHTML += '<div class="fireworks"></div>';
     // Add more amazing graphics or actions here
 });
