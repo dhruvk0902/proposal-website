@@ -49,3 +49,6 @@ button:hover {
     background-color: #ff1493;
 }
 
+.hidden {
+    display: none;
+}
