@@ -50,6 +50,26 @@
             <button id="movieDate">Movie Date</button>
             <button id="momosDate">Momos Date</button>
         </div>
+        <p id="thankYouMessage" class="hidden">Thank you for choosing a date! Looking forward to it!</p>
     </div>
+    <script>
+        document.getElementById('tennisDate').addEventListener('click', function() {
+            showThankYouMessage('Tennis Date');
+        });
+
+        document.getElementById('movieDate').addEventListener('click', function() {
+            showThankYouMessage('Movie Date');
+        });
+
+        document.getElementById('momosDate').addEventListener('click', function() {
+            showThankYouMessage('Momos Date');
+        });
+
+        function showThankYouMessage(dateType) {
+            var message = document.getElementById('thankYouMessage');
+            message.textContent = 'Thank you for choosing a ' + dateType + '! Looking forward to it!';
+            message.classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
