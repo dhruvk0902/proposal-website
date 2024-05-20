@@ -4,6 +4,11 @@ function nextPopup(currentId, nextId) {
 }
 
 document.getElementById('yesButton').addEventListener('click', function() {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
     alert("Thank you for saying Yes! Let's plan our date.");
     // Add any additional effects or animations here
 });
