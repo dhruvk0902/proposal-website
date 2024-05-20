@@ -1,3 +1,16 @@
+let currentMessage = 0;
+const messages = document.querySelectorAll('.message');
+
+function showNextMessage() {
+    if (currentMessage < messages.length) {
+        messages[currentMessage].style.display = 'block';
+        currentMessage++;
+        if (currentMessage < messages.length) {
+            setTimeout(showNextMessage, 4000); // Adjust the delay as needed
+        }
+    }
+}
+
 document.getElementById('noButton').addEventListener('mouseover', function() {
     this.style.position = 'absolute';
     this.style.top = Math.random() * (window.innerHeight - this.offsetHeight) + 'px';
@@ -12,3 +25,6 @@ document.getElementById('yesButton').addEventListener('click', function() {
     const fireworks = new Fireworks(container, { /* options */ });
     fireworks.start();
 });
+
+// Start displaying messages
+showNextMessage();
