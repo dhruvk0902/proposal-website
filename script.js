@@ -5,6 +5,7 @@ function nextPopup(currentId, nextId) {
 
 document.getElementById('yesButton').addEventListener('click', function() {
     alert("Thank you for saying Yes! Let's plan our date.");
+    // Add any additional effects or animations here
 });
 
 document.getElementById('noButton').addEventListener('mouseover', function() {
