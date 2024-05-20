@@ -10,7 +10,6 @@ document.getElementById('yesButton').addEventListener('click', function() {
         origin: { y: 0.6 }
     });
     alert("Thank you for saying Yes! Let's plan our date.");
-    // Add any additional effects or animations here
 });
 
 document.getElementById('noButton').addEventListener('mouseover', function() {
