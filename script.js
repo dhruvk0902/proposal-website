@@ -1,12 +1,14 @@
 function nextPopup(currentId, nextId) {
     // Hide current popup
-    document.getElementById(currentId).classList.remove('show');
-    document.getElementById(currentId).classList.add('hidden');
+    const currentPopup = document.getElementById(currentId);
+    currentPopup.classList.remove('show');
+    currentPopup.classList.add('hidden');
     
     // Show next popup after a short delay
     setTimeout(() => {
-        document.getElementById(nextId).classList.remove('hidden');
-        document.getElementById(nextId).classList.add('show');
+        const nextPopup = document.getElementById(nextId);
+        nextPopup.classList.remove('hidden');
+        nextPopup.classList.add('show');
     }, 100);
 
     // Trigger heart animation
@@ -15,10 +17,10 @@ function nextPopup(currentId, nextId) {
 
 function triggerHeartAnimation() {
     const heart = document.getElementById('heartAnimation');
-    heart.classList.remove('hidden');
     heart.style.animation = 'none';
     heart.offsetHeight; // Trigger reflow
     heart.style.animation = null;
+    heart.classList.remove('hidden');
     heart.classList.add('heartPop');
 }
 
